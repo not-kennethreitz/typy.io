@@ -1,3 +1,16 @@
 [[source]]
 url = "https://pypi.python.org/simple"
 verify_ssl = true
+
+[packages]
+gunicorn = "*"
+python-decouple = "*"
+bucketstore = "*"
+maya = "*"
+flask = "*"
+flask-caster = "*"
+flask-uuid = "*"
+mistune = "*"
+
+[packages.raven]
+extras = [ "flask",]
