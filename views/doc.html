@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>typy: something goes here</title>
+    <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <style>
+      #document {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.7rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/">
+      <button>
+        typy: just type™
+      </button>
+      </a>
+      <a href="/{{ hash }}/fork">
+        <button class="button-primary">Fork</button>
+    </a>
+    </header>
+    <hr>
+    <main id="document">
+    {{ doc|safe }}
+    </main>
+
+    <footer>
+      <hr/>
+      <p> Document (1 of ~{{ total }}): <code># <a href="/{{ hash }}/raw">{{ hash }}</a> </code></p>
+    </footer>
+    <script src="/public/client.js"></script>
+
+  </body>
+</html>

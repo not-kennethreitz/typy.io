@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>typy: something goes here</title>
+    <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+  </head>
+  
+  <body>
+
+    <header>
+      <a href="/">
+      <button>
+        typy: just type™
+      </button>
+        <input type="submit" class="button-primary" form="form" value="save"></input>
+      </a>
+    </header>
+
+    <main>
+      <textarea id="document" name="document" form="form">{% if seed %} {{ seed }} {% endif %}</textarea>
+    </main>
+    
+  
+    <footer>
+      <hr/>
+      <p> Document (1 of ~{{ total }}):</p>
+    </footer>
+  <form id="form" method="post" action="/"></form>
+    <script src="/public/client.js"></script>
+    <script>
+      var simplemde = new SimpleMDE({
+        autosave: {
+          enabled: true,
+          delay: 1000,
+          uniqueId: 'document'
+        },
+        placeholder: "Just type..."
+      });
+      simplemd.autofocus = true;
+      simplemde.placeholder("just type...");
+      
+      var array = $('#typ').val().split(/\n|\r/);
+
+    </script>
+
+  </body>
+</html>
