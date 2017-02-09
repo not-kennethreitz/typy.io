@@ -1,0 +1,2 @@
+# typy.io
+just type™
